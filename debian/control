@@ -1,0 +1,13 @@
+Source: sytr
+Section: python
+Priority: extra
+Maintainer: Dan Timofte <timoftedan@gmail.com>
+Build-Depends: debhelper (>= 9), python3.8, dh-virtualenv (>= 0.8), dh-systemd (>= 1.5)
+Standards-Version: 3.9.5
+
+Package: sytr
+Architecture: any
+Pre-Depends: dpkg (>= 1.16.1), python3.8, ${misc:Pre-Depends}
+Depends: ${misc:Depends}
+Description: Google Translate Daemon and CLI
+	Useful for translating files containing text in multiple languages

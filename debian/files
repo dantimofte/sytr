@@ -1,0 +1,3 @@
+sytr-dbgsym_1.0.0_amd64.ddeb debug optional automatic=yes
+sytr_1.0.0_amd64.buildinfo python extra
+sytr_1.0.0_amd64.deb python extra

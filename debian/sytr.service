@@ -1,0 +1,22 @@
+[Unit]
+Description=Google Translate Daemon
+After=network.target
+
+
+[Service]
+EnvironmentFile=-/etc/sytr/.env
+PrivateDevices=yes
+ProtectSystem=full
+Type=simple
+ExecReload=/bin/kill -HUP
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=10
+ExecStart=/opt/venvs/sytr/bin/uwsgi /etc/sytr/backend.ini
+SyslogIdentifier=GTD
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
+Alias=gtd.service
